@@ -5,16 +5,19 @@ import TodoHead from './components/TodoHead';
 import TodoList from './components/TodoList';
 import TodoCreate from './components/TodoCreate';
 import { TodoProvider } from './TodoContext';
+import Background from './Background';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: #e9ecef;
+    background: #FF0049;
+    overflow-x: hidden;
   }
 `;
 
 function App() {
   return (
     <TodoProvider>
+      <Background />
       <GlobalStyle />
       <TodoTemplate>
         <TodoHead />
@@ -22,6 +25,7 @@ function App() {
         <TodoCreate />
       </TodoTemplate>
     </TodoProvider>
+    
   );
 }
 
